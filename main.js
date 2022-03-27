@@ -2151,7 +2151,8 @@ this.wordle.bundle = function(e) {
                               , o = e.isWin
                               , r = JSON.parse(window.localStorage.getItem(j))
                               , i = JSON.parse(window.localStorage.getItem(S))
-                              , l = "Mordle ".concat(s);
+                              , l = "Mordle ".concat(s)
+                              , m = "https://mordlebeta.herokuapp.com/";
                             l += " ".concat(o ? t : "X", "/").concat(6),
                             n && (l += "*");
                             var d = "";
@@ -2183,8 +2184,8 @@ this.wordle.bundle = function(e) {
                             }
                             )),
                             {
-                                text: "".concat(l, "\n\n").concat(d.trimEnd())
-                            }
+                                text: "".concat(l, "\n\n").concat(d.trimEnd(), "\n\n").concat(m)
+                            }   
                         }({
                             evaluations: e.gameApp.evaluations,
                             dayOffset: e.gameApp.dayOffset,
