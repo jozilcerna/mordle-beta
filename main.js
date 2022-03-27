@@ -378,8 +378,8 @@ this.wordle.bundle = function(e) {
     customElements.define("game-row", x);
     var z = document.createElement("template");
     z.innerHTML = "\n  <slot></slot>\n";
-    var j = "nyt-wordle-darkmode"
-      , S = "nyt-wordle-cbmode"
+    var j = "mordle-darkmode"
+      , S = "mordle-cbmode"
       , C = function(e) {
         r(t, e);
         var a = h(t);
@@ -995,7 +995,7 @@ this.wordle.bundle = function(e) {
         }
         return e
     }
-    ))), wa = "nyt-wordle-state", xa = {
+    ))), wa = "mordle-state", xa = {
         boardState: null,
         evaluations: null,
         rowIndex: null,
@@ -1171,7 +1171,7 @@ this.wordle.bundle = function(e) {
         return Ba(Ga, e)
     }
     var Wa = "abcdefghijklmnopqrstuvwxyz";
-    var Ya = "nyt-wordle-statistics"
+    var Ya = "mordle-statistics"
       , Ua = "fail"
       , Ja = {
         currentStreak: 0,
@@ -1216,15 +1216,15 @@ this.wordle.bundle = function(e) {
             window.localStorage.setItem(Ya, JSON.stringify(e))
         }(n)
     }
-    var Ka, Qa = "nyt-wordle-refresh", es = window.localStorage;
+    var Ka, Qa = "mordle-refresh", es = window.localStorage;
     function as() {
         return Ka || (Ka = setInterval((function() {
             es.getItem(Qa) && (es.removeItem(Qa),
-            window.location.href.match(/.*\.nytimes\.com/g) ? window.location.reload(!0) : window.location.replace("https://www.nytimes.com/games/wordle"))
+            window.location.href.match(/.*\.herokuapp\.com/g) ? window.location.reload(!0) : window.location.replace("https://mordlebeta.herokuapp.com/"))
         }
         ), 432e5))
     }
-    var ss = "nyt-wordle-statistics"
+    var ss = "mordle-statistics"
       , ts = window.localStorage;
     function ns(e, a) {
         if (!e.gamesPlayed)
